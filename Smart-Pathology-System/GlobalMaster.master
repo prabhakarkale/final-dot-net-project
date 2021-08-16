@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GlobalMaster.master.cs" Inherits="GlobalMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+    <link href="bootstrapCSS/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/GlobalMaster.css" rel="stylesheet" type="text/css" />
+
+     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="fluid-container">
+        <div class="header">
+            <div class="icon">
+            <i class="fas fa-hand-holding-heart heading-icon"></i>
+            </div>
+            <div> <p class="title">Smart Pathology </p></div>
+            <ul class="menus">
+            <a href="SignUp.aspx">Sign Up</a>
+            <a href="SignIn.aspx">Sign In</a>
+        </ul>
+        </div>
+        
+    <form id="form1" runat="server">
+    <div class="working-space">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+       
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+    </div>
+</body>
+</html>

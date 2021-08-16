@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.panelbox
+    {
+        border:1px solid black;
+        width: 400px;
+        margin:auto;
+        padding:20px;
+        padding-bottom: 30px;
+        text-align:center;
+        }

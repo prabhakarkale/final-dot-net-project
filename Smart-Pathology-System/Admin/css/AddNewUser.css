@@ -1,0 +1,36 @@
+﻿
+.heading-text
+{
+    font-size:40px;
+    padding-bottom:40px;
+    font-weight: 600;
+    font-family:Montserrat;
+}
+.inputbox
+    {
+        width:280px;
+        height:40px;
+        margin:10px;
+    }
+    
+    .inputbox_big
+    {
+    width:585px;
+        height:40px;
+        margin:10px;
+    }
+    
+    .panelbox
+    {
+        border:1px solid red;
+        width: 650px;
+        margin:auto;
+        padding:20px;
+        padding-bottom: 30px;
+        }
+        
+     .btn-div
+     {
+         margin:auto;
+         width:300px;
+     }
