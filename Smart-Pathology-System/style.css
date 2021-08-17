@@ -1,0 +1,161 @@
+﻿body {
+}
+
+.heading-text
+{
+     font-size:40px;
+    padding-bottom:40px;
+    font-weight: 600;
+    font-family:Montserrat;   
+    text-align:center; 
+}
+
+.inputbox
+{
+    width:280px;
+    height:40px;
+    margin:10px;
+}
+    
+.inputbox_big
+{
+    width:585px;
+    height:40px;
+    margin:10px;
+}
+
+.first-row
+{
+    clear: both;
+    margin-top: 100px;
+    width: 1180px;
+    margin:auto;
+    clear: both;
+    margin-bottom: 40px;
+}
+
+.first-row .upcoming-items
+{
+    
+    width : 300px;
+    border: 1px solid black;
+    height: 400px;
+    border-radius: 40px;
+    background: #ADF8E4;
+}
+
+.upcoming-items .upcomming-heading
+{
+    width:100%;
+    border:1px solid red;
+    height: 60px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    
+}
+
+.upcomming-event
+{
+    height:60px;
+    border-bottom: 1px solid black;
+}
+
+
+
+.text-row
+{
+    width: 1180px;
+    margin:auto;
+    clear: both;
+    height: 200px;
+    margin-bottom: 40px;
+     
+}
+
+.image-div
+{
+    width:210px;
+    height:210px;
+    float:left;  
+    border:1px solid white;
+    box-shadow: 6px 5px 10px gray, -6px -5px 10px;
+    border-radius: 50%;  
+}
+
+.image-div-left
+{  
+    margin-right:40px;
+    margin-top: -30px;
+}
+
+.image-div-right
+{
+    margin-left:40px;
+    margin-top: -30px;
+}
+
+.text-div
+{
+    font-size: 20px;
+    margin-left:20px;
+    width: 750px;
+    float: left;
+    text-align: justify;
+    font-weight: 600;  
+}
+
+/*  Doctor Home page */
+
+.inner-container
+{
+    width: 1200px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer
+    {
+        color: White;
+        width:100%;
+        background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+        height: 150px;
+        
+        border-top: 2px solid white;
+    }
+    
+    .footer .heading-icon
+    {
+        margin-left: 100px;
+        margin-top: 40px;
+        padding-bottom: 50px;
+        margin-right:100px;
+    }

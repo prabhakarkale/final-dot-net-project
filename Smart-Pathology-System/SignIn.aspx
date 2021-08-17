@@ -10,19 +10,23 @@
     
         <h1 class="heading-text" align="center">Sign In</h1>
 
-    <asp:DropDownList ID="ddlusertype" class="inputbox" runat="server">
+    <asp:DropDownList ID="ddlusertype" class="inputbox" runat="server" 
+            AutoPostBack="True" onselectedindexchanged="ddlusertype_SelectedIndexChanged">
         <asp:ListItem Value="0">Select User</asp:ListItem>
-        <asp:ListItem>Patient</asp:ListItem>
-        <asp:ListItem>Doctor</asp:ListItem>
-        <asp:ListItem>Admin</asp:ListItem>
+        <asp:ListItem Value="1">Patient</asp:ListItem>
+        <asp:ListItem Value="2">Doctor</asp:ListItem>
+        <asp:ListItem Value="3">Admin</asp:ListItem>
     </asp:DropDownList>
     <br />
     <asp:TextBox ID="txtusername" class="inputbox" runat="server" placeholder="Email"></asp:TextBox><br />
-    <asp:TextBox ID="txtpassword" class="inputbox" runat="server" placeholder="Password"></asp:TextBox>
+    <asp:TextBox ID="txtpassword" class="inputbox" runat="server" 
+            placeholder="Password" TextMode="Password"></asp:TextBox>
     <br />
-    <asp:Button ID="btnsignin" runat="server" Text="SignIn" class="btn btn-success" />
+    <asp:Button ID="btnsignin" runat="server" Text="SignIn" class="btn btn-success" 
+            onclick="btnsignin_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="btnreset" runat="server" Text="Reset" class="btn btn-danger"/>
+    <asp:Button ID="btnreset" runat="server" Text="Reset" class="btn btn-danger" 
+            onclick="btnreset_Click"/>
     </asp:Panel>
     <br />
     <br />

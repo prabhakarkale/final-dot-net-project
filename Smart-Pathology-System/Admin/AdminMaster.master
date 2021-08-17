@@ -41,6 +41,36 @@
         </asp:ContentPlaceHolder>
     </div>
     <div class="footer">
+    <table cellpadding="0" cellspacing="0">
+            <tr>
+            <td>
+                 <i class="fas fa-hand-holding-heart heading-icon"></i>
+            </td>
+            <td style="padding-right:80px;">
+                <h3>Location</h3>
+                <p>Near tarakpur bus stand 
+                    <br />
+                    Alpha Labrotory, Ahmednagar
+                </p>
+            </td>
+            <td style="padding-right:80px;">
+                <h3>Email</h3>
+                <p>alphalab@gmail.com
+                </p>
+            </td>
+            <td style="padding-right:70px;">
+                <h3>Phone</h3>
+                <p>(859) 749-5864
+                </p>
+            </td>
+            <td style="padding-left:300px;">
+            <i class="fab fa-facebook-f" style="font-size:30px;margin-right:20px;"></i>
+            <i class="fab fa-instagram" style="font-size:30px;margin-right:20px;"></i>
+            <i class="fab fa-whatsapp" style="font-size:30px;margin-right:20px;"></i>
+           <i class="fab fa-youtube" style="font-size:30px;margin-right:20px;"></i>
+            </td>
+            </tr>
+        </table>
     </div>
     </form>
     </div>

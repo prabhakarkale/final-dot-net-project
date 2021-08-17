@@ -27,7 +27,7 @@ public partial class Patient_RequestForTest : System.Web.UI.Page
                 ListItem li = new ListItem();
                 li.Text = dr.GetValue(0).ToString();
                 li.Value = dr.GetValue(1).ToString();
-                ListBox1.Items.Add(li);
+                lbselecttests.Items.Add(li);
             }
 
            
@@ -39,16 +39,16 @@ public partial class Patient_RequestForTest : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         conn.Open();
-        string sql = "select test_id, test_name from tests where group_id="+DropDownList1.SelectedValue;
+        string sql = "select test_id, test_name from tests where group_id="+ddlfilterbygroup.SelectedValue;
         SqlCommand cmd = new SqlCommand(sql, conn);
         SqlDataReader dr = cmd.ExecuteReader();
-        ListBox1.Items.Clear();
+        lbselecttests.Items.Clear();
         while (dr.Read())
         {
             ListItem li = new ListItem();
             li.Text = dr.GetValue(0).ToString();
             li.Value = dr.GetValue(1).ToString();
-            ListBox1.Items.Add(li);
+            lbselecttests.Items.Add(li);
         }
 
 
@@ -57,16 +57,16 @@ public partial class Patient_RequestForTest : System.Web.UI.Page
     }
     protected void Button3_Click(object sender, EventArgs e)
     {
-        var items = from ListItem li in ListBox1.Items
+        var items = from ListItem li in lbselecttests.Items
                     where li.Selected == true
                     select li;
 
         foreach (ListItem li in items)
         {
 
-            if (!ListBox2.Items.Contains(li))
+            if (!lbselectedtests.Items.Contains(li))
             {
-                ListBox2.Items.Add(li);
+                lbselectedtests.Items.Add(li);
                 //Add data to listbox
             }
         }
@@ -74,9 +74,46 @@ public partial class Patient_RequestForTest : System.Web.UI.Page
     }
     protected void Button4_Click(object sender, EventArgs e)
     {
-        ListItem li = new ListItem();
-        li.Value = "4";
-        li.Text = "key";
-        ListBox2.Items.Add(li);
+        lbselectedtests.Items.Clear();
+    }
+    protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (ddlrequestby.SelectedIndex == 0)
+        {
+            txtdoctorrefcode.Enabled = false;
+        }
+        else
+        {
+            txtdoctorrefcode.Enabled = true;
+        }
+    }
+    protected void btnaddrequest_Click(object sender, EventArgs e)
+    {
+
+        if (ddlrequestby.SelectedIndex == 0)
+        {
+            Response.Write("by self");
+        }
+        else
+            Response.Write("by Doctor");
+
+        /*try
+        {
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            conn.Open();
+            string insertQuery = "INSERT INTO test_request(patient_id, address, doctor_id)"+
+                "VALUES (@patinet_id, @address,@doctor_id)";
+            //string insertQuery = "insert into RegisterDataBase(StudentName,Passwords,EmailId,Department,College)values (@studentname,@passwords,@emailid,@department,@college)";
+            SqlCommand cmd = new SqlCommand(insertQuery, conn);
+            cmd.Parameters.AddWithValue("@patinet_id", 1);
+            cmd.Parameters.AddWithValue("@address", txtchangedaddress.Text);
+            cmd.Parameters.AddWithValue("@doctor_id", .Text);
+            cmd.ExecuteNonQuery();
+        }
+        catch (Exception ex)
+        {
+            Response.Write("Error " + ex.Message.ToString());
+        }*/
+
     }
 }
